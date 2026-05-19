@@ -1,0 +1,129 @@
+{
+  "theme": "dark",
+  "archetype": "5 (Jewel & Luxury) & 4 (Swiss & High-Contrast) Hybrid",
+  "design_philosophy": "Premium enterprise consulting aesthetic. Executive minimalism, structured systems-inspired UI, elegant depth layering, strong mobile readability. Linear/Stripe Enterprise dark mode style, operationally mature, governance-oriented.",
+  "colors": {
+    "background": "#071120",
+    "surface": "#0F1B33",
+    "surface_hover": "#162547",
+    "accent_gold": "#E7B85C",
+    "accent_gold_hover": "#F0C879",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#B8C2D1",
+    "interactive_blue": "#4D7CFE",
+    "border_subtle": "rgba(184, 194, 209, 0.15)"
+  },
+  "typography": {
+    "font_families": {
+      "heading": "Sora, 'General Sans', sans-serif",
+      "body": "Inter, Manrope, sans-serif"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-semibold text-white",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-medium text-white",
+      "h3": "text-xl sm:text-2xl font-medium text-white",
+      "body": "text-base sm:text-lg leading-relaxed text-[#B8C2D1]",
+      "small_label": "text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold text-[#E7B85C]"
+    }
+  },
+  "layout_and_spacing": {
+    "strategy": "Mobile-first approach. Desktop acts as an enhanced extension of the mobile experience. High priority on touch-friendly spacing and readability on mobile.",
+    "container": "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12",
+    "section_spacing": "py-20 sm:py-24 lg:py-32",
+    "grid_patterns": "Asymmetrical structured grids on desktop. Use CSS Subgrid where applicable. Bento box layouts with 1px subtle borders (border-border_subtle) and dark surfaces."
+  },
+  "surface_strategies": {
+    "navbar": "Sticky compact navbar, backdrop-blur-xl bg-[#071120]/80, 1px bottom border border-white/5",
+    "cards": "Flat surfaces (#0F1B33), 1px subtle border (#FFFFFF/10), no heavy shadows, subtle hover elevation (-translate-y-1) and border color shift to interactive blue or gold.",
+    "buttons": {
+      "primary": "bg-[#E7B85C] text-[#071120] hover:bg-[#F0C879] font-medium px-6 py-3 rounded-md transition-colors",
+      "secondary": "border border-[#4D7CFE]/30 text-[#4D7CFE] hover:bg-[#4D7CFE]/10 px-6 py-3 rounded-md transition-colors",
+      "ghost": "text-[#B8C2D1] hover:text-white transition-colors"
+    }
+  },
+  "components": [
+    {
+      "name": "Navigation",
+      "description": "Sticky transparent navbar with scroll blur. Mobile hamburger overlay menu. Elegant secondary link styling for WhatsApp (no bright green buttons)."
+    },
+    {
+      "name": "Hero Section",
+      "description": "Cinematic enterprise headline. Abstract workflow/governance background visual. Two CTAs (Primary Gold, Secondary Blue outline)."
+    },
+    {
+      "name": "Trust Metrics",
+      "description": "Animated counters (200+ Teams Transformed, 98% Satisfaction, 50+ Coaches, 8+ Years, 500+ Profiles, 10+ Clients, 200+ Experts). Horizontal scroll on mobile to save vertical space."
+    },
+    {
+      "name": "Enterprise Consulting Services",
+      "description": "4 cards: Agile Transformation, PMO Consulting, Project Delivery Consulting, Specialized Project Resources. Use thin line icons (Lucide React)."
+    },
+    {
+      "name": "Agile Transformation",
+      "description": "Capabilities grid showcasing agile methodologies and transformation metrics. Use agile_transformation_visual."
+    },
+    {
+      "name": "PMO Strategy & Governance",
+      "description": "Governance visuals and structured workflow diagrams. Use pmo_governance_visual."
+    },
+    {
+      "name": "Specialized Project Resources",
+      "description": "Accordion component (Shadcn UI) containing 9 resource types. Must feel like premium specialized consulting, not a staffing board."
+    },
+    {
+      "name": "Why Enterprises Partner With Us",
+      "description": "8 points presented in a structured, asymmetrical grid. Use enterprise_systems_graphic as a supporting visual element."
+    },
+    {
+      "name": "Flexible Engagement Models",
+      "description": "5 cards detailing engagement structures. Minimalist, high contrast, clean typography."
+    },
+    {
+      "name": "Consultation Form",
+      "description": "Premium dark form using Shadcn UI Form/Input/Select components. Conditional dropdown logic."
+    },
+    {
+      "name": "Footer",
+      "description": "Minimal premium footer, large typography for 'Let's Talk', LinkedIn link, copyright. Large padding (py-24)."
+    }
+  ],
+  "motion_and_interaction": {
+    "library": "framer-motion",
+    "rules": "Subtle fades, staggered reveals for lists/grids, smooth transitions. No heavy parallax or scroll hijacking. Hover elevation on cards."
+  },
+  "media": {
+    "icon_library": "lucide-react",
+    "icon_style": "Thin line icons, stroke-width: 1.5, text-[#E7B85C] or text-[#4D7CFE]",
+    "image_urls": [
+      {
+        "category": "Hero Background",
+        "description": "Abstract enterprise systems and workflow graphics, glowing gold lines on deep navy.",
+        "url": "https://static.prod-images.emergentagent.com/jobs/0794aeb0-1d8e-4e80-995a-e13876cfbdc0/images/6632f011e15db9aceff1f13afe54163667e952360c972bb5bf1691c2f7bfbdb0.png"
+      },
+      {
+        "category": "PMO Governance",
+        "description": "Structured grid with subtle gold and blue data points.",
+        "url": "https://static.prod-images.emergentagent.com/jobs/0794aeb0-1d8e-4e80-995a-e13876cfbdc0/images/0fee3ee12a4712f1c25f2e2d7f86c7d3429527b98af1ec1bd92f9a3411f60015.png"
+      },
+      {
+        "category": "Agile Transformation",
+        "description": "Dynamic moving elements converging into structured form.",
+        "url": "https://static.prod-images.emergentagent.com/jobs/0794aeb0-1d8e-4e80-995a-e13876cfbdc0/images/8de1ab202e592658b49b2b0f31ded33664ae7088d507034d46a66521bec335ac.png"
+      },
+      {
+        "category": "Enterprise Systems Graphic",
+        "description": "Dark minimalist corporate architecture graphic.",
+        "url": "https://static.prod-images.emergentagent.com/jobs/0794aeb0-1d8e-4e80-995a-e13876cfbdc0/images/25342c5692d6d9417ce1e595a050cd409e2b301e465cc68b364fc035c32905f7.png"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "DO NOT use placeholder images. Use ONLY the provided media URLs.",
+    "Ensure all interactive elements have a data-testid attribute in kebab-case based on their role.",
+    "Implement mobile-first design strictly. Test horizontal scrolling on Trust Metrics for small screens.",
+    "Use Sora (or equivalent) for headings and Inter for body text via Google Fonts.",
+    "Build standard interactive elements (Accordions, Forms) using Shadcn UI primitives, customized to the locked color palette.",
+    "Avoid generic stock imagery, handshake photos, or AI robot visuals.",
+    "Ensure the background color #071120 is applied globally."
+  ]
+}
