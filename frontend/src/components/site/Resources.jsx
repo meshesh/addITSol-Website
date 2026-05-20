@@ -7,51 +7,6 @@ import {
 } from "@/components/ui/accordion";
 
 const RES = [
-  // {
-  //     title: "Project Manager",
-  //     d: "Senior PMs experienced across regulated, technology, and transformation programs. PMP and Agile certified, accountable for delivery, scope, schedule, and stakeholder alignment.",
-  //     tags: ["PMP", "Agile", "Hybrid Delivery"],
-  // },
-  // {
-  //     title: "Technical Project Manager",
-  //     d: "PMs with deep technical fluency to lead engineering, platform, and integration initiatives end-to-end across distributed teams.",
-  //     tags: ["Engineering", "Platforms", "Integrations"],
-  // },
-  // {
-  //     title: "Technical Project Coordinator",
-  //     d: "Coordination and tracking specialists supporting senior PMs and TPMs with rituals, artifacts, RAID logs, and operational hygiene.",
-  //     tags: ["RAID", "Ceremonies", "Tracking"],
-  // },
-  // {
-  //     title: "Scrum Master",
-  //     d: "Certified Scrum Masters with experience facilitating high-performing teams, removing impediments, and embedding agile rituals at scale.",
-  //     tags: ["CSM", "PSM", "Team Health"],
-  // },
-  // {
-  //     title: "Project Coordinator",
-  //     d: "Skilled coordinators driving program operations, reporting cadences, and stakeholder communications across initiatives.",
-  //     tags: ["Reporting", "Comms", "Ops"],
-  // },
-  // {
-  //     title: "Agile Coach",
-  //     d: "Enterprise coaches enabling teams, leaders, and portfolios to adopt scaled agile frameworks with measurable delivery outcomes.",
-  //     tags: ["SAFe", "LeSS", "Scaling"],
-  // },
-  // {
-  //     title: "PMO Specialist",
-  //     d: "PMO practitioners experienced in governance, portfolio management, KPI design, and PMO maturity uplift.",
-  //     tags: ["Governance", "KPI", "Maturity"],
-  // },
-  // {
-  //     title: "Program Manager",
-  //     d: "Senior program leaders running multi-stream initiatives with executive visibility, risk control, and outcome ownership.",
-  //     tags: ["Programs", "Stakeholders", "Outcomes"],
-  // },
-  // {
-  //     title: "Technical Program Manager",
-  //     d: "TPMs accountable for large-scale technical programs spanning platform, infrastructure, and product engineering teams.",
-  //     tags: ["TPM", "Architecture", "Cross-team"],
-  // },
   {
     title: "Project Manager",
     d: "Experienced project leaders managing scope, timelines, budgets, and stakeholder alignment across enterprise transformation initiatives.",

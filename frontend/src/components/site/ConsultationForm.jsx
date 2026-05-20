@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-// import axios from "axios";
-// import { useState } from "react";
 import { toast } from "sonner";
 import { ArrowRight, MessageCircle, Loader2 } from "lucide-react";
 import {
@@ -12,8 +10,6 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 
-// const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
-// const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbyeUgvH_OPJbaRWHIlntLXNvKtkqtA8cBV3dVfqIqFg3hN91PfpuNKdSY2JN4G58IxK/exec";
 
@@ -28,22 +24,6 @@ const initialState = {
 };
 
 export default function ConsultationForm() {
-  // const [opts, setOpts] = useState({
-  //     requirement_types: [],
-  //     resource_types: [],
-  // });
-  // const [form, setForm] = useState(initialState);
-  // const [submitting, setSubmitting] = useState(false);
-
-  // useEffect(() => {
-  //     axios
-  //         .get(`${API}/options`)
-  //         .then((r) => setOpts(r.data))
-  //         .catch(() => {
-  //             /* fail silently — fallback hardcoded below */
-  //         });
-  // }, []);
-
   const requirementOptions = [
     {
       value: "agile_transformation",
@@ -151,13 +131,6 @@ export default function ConsultationForm() {
 
     try {
       setSubmitting(true);
-      // const r = await axios.post(`${API}/leads`, payload);
-      // toast.success(
-      //   "Consultation request received. Our team will reach out shortly.",
-      //   { duration: 5000 },
-      // );
-      // setForm(initialState);
-      // console.log("Lead created", r.data);
       const response = await fetch(SCRIPT_URL, {
         method: "POST",
         headers: {
@@ -179,10 +152,6 @@ export default function ConsultationForm() {
         toast.error("Submission failed.");
       }
     } catch (err) {
-      // const msg =
-      //   err?.response?.data?.detail ||
-      //   "Something went wrong. Please try again or use WhatsApp.";
-      // toast.error(typeof msg === "string" ? msg : "Submission failed");
       toast.error("Something went wrong. Please try again or use WhatsApp.");
     } finally {
       setSubmitting(false);
