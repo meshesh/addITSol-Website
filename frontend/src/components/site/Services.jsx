@@ -45,7 +45,6 @@ const SERVICES = [
   },
   {
     icon: ClipboardList,
-    // title: "Project Delivery Consulting",
     title: "Domain Expertise",
     desc: "Specialized consulting capabilities tailored for high-impact enterprise transformation programs.",
     items: [
@@ -75,19 +74,6 @@ const SERVICES = [
     ],
     anchor: "#pmo",
   },
-  // {
-  //     icon: GitBranch,
-  //     title: "Agile Transformation",
-  //     desc: "Enterprise agile transformation services focused on improving collaboration, delivery predictability, and organizational adaptability.",
-  //     items: [
-  //         "Scrum Implementation",
-  //         "SAFe Transformation",
-  //         "Agile Coaching",
-  //         "Team Enablement",
-  //         "Delivery Optimization",
-  //     ],
-  //     anchor: "#agile",
-  // },
 ];
 
 export default function Services() {
