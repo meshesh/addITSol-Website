@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import axios from "axios";
+// import axios from "axios";
 // import { useState } from "react";
 import { toast } from "sonner";
 import { ArrowRight, MessageCircle, Loader2 } from "lucide-react";
@@ -13,7 +13,9 @@ import {
 } from "@/components/ui/select";
 
 // const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+// const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyeUgvH_OPJbaRWHIlntLXNvKtkqtA8cBV3dVfqIqFg3hN91PfpuNKdSY2JN4G58IxK/exec";
 
 const initialState = {
   full_name: "",
@@ -149,18 +151,39 @@ export default function ConsultationForm() {
 
     try {
       setSubmitting(true);
-      const r = await axios.post(`${API}/leads`, payload);
-      toast.success(
-        "Consultation request received. Our team will reach out shortly.",
-        { duration: 5000 },
-      );
-      setForm(initialState);
-      console.log("Lead created", r.data);
+      // const r = await axios.post(`${API}/leads`, payload);
+      // toast.success(
+      //   "Consultation request received. Our team will reach out shortly.",
+      //   { duration: 5000 },
+      // );
+      // setForm(initialState);
+      // console.log("Lead created", r.data);
+      const response = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success(
+          "Consultation request received. Our team will reach out shortly.",
+          { duration: 5000 },
+        );
+
+        setForm(initialState);
+      } else {
+        toast.error("Submission failed.");
+      }
     } catch (err) {
-      const msg =
-        err?.response?.data?.detail ||
-        "Something went wrong. Please try again or use WhatsApp.";
-      toast.error(typeof msg === "string" ? msg : "Submission failed");
+      // const msg =
+      //   err?.response?.data?.detail ||
+      //   "Something went wrong. Please try again or use WhatsApp.";
+      // toast.error(typeof msg === "string" ? msg : "Submission failed");
+      toast.error("Something went wrong. Please try again or use WhatsApp.");
     } finally {
       setSubmitting(false);
     }
